@@ -1,4 +1,4 @@
-package es.upv.ejercicioeventos1;
+package es.upv.ejercioeventos1.controlador;
 
 import javafx.fxml.FXML;
 import javafx.geometry.HPos;
@@ -6,11 +6,10 @@ import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 
 public class MoveController {
 	@FXML
-	private HBox myButton;
+	private Button HBox;
 	
 	@FXML
 	protected void move(KeyEvent keyEvent) {
