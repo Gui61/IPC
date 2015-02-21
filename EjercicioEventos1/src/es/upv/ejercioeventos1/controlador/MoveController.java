@@ -15,9 +15,7 @@ public class MoveController {
 	protected void move(KeyEvent keyEvent) {
 		KeyCode pressedKey = keyEvent.getCode();
 		if(KeyCode.UP == pressedKey){
-	        GridPane.setHalignment(HBox,HPos.RIGHT);
-
+	        GridPane.setHalignment(HBox,HPos.RIGHT);			
 		}
-			
-		}
+	}
 }
