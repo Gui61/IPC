@@ -17,14 +17,14 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
    </rowConstraints>
    <columnConstraints>
-      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
-      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
-      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
-      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
-      <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="50.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="50.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="50.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="50.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="50.0" />
    </columnConstraints>
    <children>
-      <Button fx:id="boton" alignment="CENTER" mnemonicParsing="false" onKeyPressed="#botonMove" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+      <Button fx:id="boton" alignment="CENTER" mnemonicParsing="false" onKeyPressed="#botonMove" prefHeight="25.0" prefWidth="200.0" styleClass="boton" stylesheets="@../application.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
