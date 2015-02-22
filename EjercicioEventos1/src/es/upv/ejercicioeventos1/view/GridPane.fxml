@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.GridPane?>
 
-<GridPane alignment="CENTER" gridLinesVisible="true" minHeight="150.0" minWidth="200.0" prefHeight="150.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="/es/upv/ejercicioeventos1/controlador/MoveController">
+<GridPane fx:id="grid" alignment="CENTER" gridLinesVisible="true" minHeight="150.0" minWidth="200.0" prefHeight="150.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.upv.ejercicioeventos1.SampleController">
    <rowConstraints>
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
@@ -22,17 +23,13 @@
       <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
    </columnConstraints>
    <children>
-      <HBox fx:id="HBox" alignment="CENTER" onKeyPressed="#keyPressed" GridPane.columnIndex="2" GridPane.rowIndex="2">
-         <children>
-            <Button alignment="CENTER" contentDisplay="CENTER" minWidth="35.0" mnemonicParsing="false" onKeyPressed="#move" GridPane.columnIndex="2" GridPane.rowIndex="2">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <GridPane.margin>
-                  <Insets left="30.0" right="5.0" />
-               </GridPane.margin>
-            </Button>
-         </children>
-      </HBox>
+      <Button fx:id="boton" alignment="CENTER" contentDisplay="CENTER" minWidth="40.0" mnemonicParsing="false" onKeyPressed="#botonMove" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Button>
    </children>
 </GridPane>
