@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -23,13 +24,16 @@
       <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
    </columnConstraints>
    <children>
-      <Button fx:id="boton" alignment="CENTER" contentDisplay="CENTER" minWidth="40.0" mnemonicParsing="false" onKeyPressed="#botonMove" GridPane.columnIndex="2" GridPane.rowIndex="2">
+      <Button fx:id="boton" alignment="CENTER" mnemonicParsing="false" onKeyPressed="#botonMove" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
          <GridPane.margin>
             <Insets />
          </GridPane.margin>
+         <effect>
+            <ColorAdjust />
+         </effect>
       </Button>
    </children>
 </GridPane>
