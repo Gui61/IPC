@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.geometry.*?>
@@ -8,32 +10,54 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.GridPane?>
 
-<GridPane fx:id="grid" alignment="CENTER" gridLinesVisible="true" minHeight="150.0" minWidth="200.0" prefHeight="150.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.upv.ejercicioeventos1.SampleController">
-   <rowConstraints>
-      <RowConstraints minHeight="10.0" prefHeight="30.0" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" />
-   </rowConstraints>
+<GridPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.upv.ejercicioeventos1.SampleController">
    <columnConstraints>
-      <ColumnConstraints minWidth="10.0" prefWidth="50.0" />
-      <ColumnConstraints minWidth="10.0" prefWidth="50.0" />
-      <ColumnConstraints minWidth="10.0" prefWidth="50.0" />
-      <ColumnConstraints minWidth="10.0" prefWidth="50.0" />
-      <ColumnConstraints minWidth="10.0" prefWidth="50.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
    </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
    <children>
-      <Button fx:id="boton" alignment="CENTER" mnemonicParsing="false" onKeyPressed="#botonMove" prefHeight="25.0" prefWidth="200.0" styleClass="boton" stylesheets="@../application.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-         <GridPane.margin>
-            <Insets />
-         </GridPane.margin>
-         <effect>
-            <ColorAdjust />
-         </effect>
-      </Button>
+      <GridPane fx:id="grid" alignment="CENTER" gridLinesVisible="true" minHeight="150.0" minWidth="200.0" prefHeight="150.0" prefWidth="200.0">
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+         </rowConstraints>
+         <columnConstraints>
+            <ColumnConstraints minWidth="10.0" prefWidth="50.0" />
+            <ColumnConstraints minWidth="10.0" prefWidth="50.0" />
+            <ColumnConstraints minWidth="10.0" prefWidth="50.0" />
+            <ColumnConstraints minWidth="10.0" prefWidth="50.0" />
+            <ColumnConstraints minWidth="10.0" prefWidth="50.0" />
+         </columnConstraints>
+         <children>
+            <Button fx:id="boton" alignment="CENTER" mnemonicParsing="false" onKeyPressed="#botonMove" prefHeight="30.0" prefWidth="80.0" styleClass="boton" stylesheets="@../application.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+            </Button>
+            <Button fx:id="meCasiaron" mnemonicParsing="false" prefHeight="241.0" prefWidth="413.0" styleClass="meCasiaron" stylesheets="@../application.css" text="   " />
+         </children>
+      </GridPane>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+         <children>
+            <Label text="Roit pionts:   " />
+            <Text fx:id="points" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="35.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
    </children>
 </GridPane>
