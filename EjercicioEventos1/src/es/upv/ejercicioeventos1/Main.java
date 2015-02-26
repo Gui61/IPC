@@ -14,6 +14,7 @@ public class Main extends Application {
 			GridPane root = (GridPane)FXMLLoader.load(getClass().getResource("/es/upv/ejercicioeventos1/view/GridPane.fxml"));
 			Scene scene = new Scene(root,400,400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setTitle("Cuadrados locos");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {

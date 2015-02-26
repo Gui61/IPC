@@ -46,7 +46,7 @@
                   <ColorAdjust />
                </effect>
             </Button>
-            <Button fx:id="meCasiaron" mnemonicParsing="false" prefHeight="241.0" prefWidth="413.0" styleClass="meCasiaron" stylesheets="@../application.css" text="   " />
+            <Button fx:id="meCasiaron" alignment="CENTER" mnemonicParsing="false" onAction="#botonMove" prefHeight="241.0" prefWidth="413.0" styleClass="meCasiaron" stylesheets="@../application.css" text="   " />
          </children>
       </GridPane>
       <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
