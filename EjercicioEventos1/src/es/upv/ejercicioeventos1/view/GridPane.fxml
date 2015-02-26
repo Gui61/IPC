@@ -35,6 +35,7 @@
             <ColumnConstraints minWidth="10.0" prefWidth="50.0" />
          </columnConstraints>
          <children>
+            <Button fx:id="meCasiaron" alignment="CENTER" mnemonicParsing="false" onAction="#botonMove" prefHeight="241.0" prefWidth="413.0" styleClass="meCasiaron" stylesheets="@../application.css" text="   " GridPane.columnIndex="2" GridPane.rowIndex="2" />
             <Button fx:id="boton" alignment="CENTER" mnemonicParsing="false" onKeyPressed="#botonMove" prefHeight="30.0" prefWidth="80.0" styleClass="boton" stylesheets="@../application.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <opaqueInsets>
                   <Insets />
@@ -46,7 +47,6 @@
                   <ColorAdjust />
                </effect>
             </Button>
-            <Button fx:id="meCasiaron" alignment="CENTER" mnemonicParsing="false" onAction="#botonMove" prefHeight="241.0" prefWidth="413.0" styleClass="meCasiaron" stylesheets="@../application.css" text="   " />
          </children>
       </GridPane>
       <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
