@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 
 
 public class Main extends Application {
+	private double x,y;
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -21,17 +22,14 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.initStyle(StageStyle.TRANSPARENT);
 			
-			final DoubleProperty x= new SimpleDoubleProperty();
-			final DoubleProperty y= new SimpleDoubleProperty();
-			
 			scene.setOnMousePressed((e)->{
-				x.setValue(primaryStage.getX() - e.getScreenX());
-				y.setValue(primaryStage.getY() - e.getScreenY());
+				x= primaryStage.getX() - e.getScreenX();
+				y= primaryStage.getY() - e.getScreenY();
 			});
 			
 			scene.setOnMouseDragged((e)->{
-				primaryStage.setX(e.getScreenX() + x.getValue());
-				primaryStage.setY(e.getScreenY() + y.getValue());
+				primaryStage.setX(e.getScreenX() + x);
+				primaryStage.setY(e.getScreenY() + y);
 			});
 			
 			primaryStage.show();
