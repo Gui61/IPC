@@ -12,14 +12,16 @@
 
 <GridPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.upv.ejercicioeventos1.SampleController">
    <columnConstraints>
+      <ColumnConstraints />
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
    </columnConstraints>
    <rowConstraints>
+      <RowConstraints />
       <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
    </rowConstraints>
    <children>
-      <GridPane fx:id="grid" alignment="CENTER" gridLinesVisible="true" minHeight="150.0" minWidth="200.0" prefHeight="150.0" prefWidth="200.0">
+      <GridPane fx:id="grid" alignment="CENTER" gridLinesVisible="true" minHeight="150.0" minWidth="200.0" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <rowConstraints>
             <RowConstraints minHeight="10.0" prefHeight="30.0" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" />
@@ -35,7 +37,7 @@
             <ColumnConstraints minWidth="10.0" prefWidth="50.0" />
          </columnConstraints>
          <children>
-            <Button fx:id="meCasiaron" alignment="CENTER" mnemonicParsing="false" onAction="#botonMove" prefHeight="241.0" prefWidth="413.0" styleClass="meCasiaron" stylesheets="@../application.css" text="   " GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="meCasiaron" alignment="CENTER" mnemonicParsing="false" onKeyPressed="#botonMove" prefHeight="241.0" prefWidth="413.0" styleClass="meCasiaron" stylesheets="@../application.css" text="   " GridPane.columnIndex="2" GridPane.rowIndex="2" />
             <Button fx:id="boton" alignment="CENTER" mnemonicParsing="false" onKeyPressed="#botonMove" prefHeight="30.0" prefWidth="80.0" styleClass="boton" stylesheets="@../application.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <opaqueInsets>
                   <Insets />
@@ -49,14 +51,19 @@
             </Button>
          </children>
       </GridPane>
-      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <children>
             <Label text="Roit pionts:   " />
-            <Text fx:id="points" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="RIGHT" wrappingWidth="35.0">
+            <Text fx:id="points" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="70.0">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Text>
+            <Button fx:id="botonSierrar" alignment="TOP_RIGHT" mnemonicParsing="false" onAction="#Cerrar" text="Sierrar">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
          </children>
       </HBox>
    </children>

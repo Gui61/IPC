@@ -1,5 +1,7 @@
 package es.upv.ejercicioeventos1;
 
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.input.KeyEvent;
@@ -9,8 +11,13 @@ import javafx.scene.text.Text;
 public class SampleController {
 	@FXML
 	private Button boton;
+	@FXML
 	private Button meCasiaron;
+	@FXML
+	private Button botonSierrar;
+	@FXML
 	private GridPane grid;
+	@FXML
 	private Text points;
 	
 	@FXML
@@ -58,6 +65,10 @@ public class SampleController {
 			break;
 		}			
 	}
+	@FXML
+	protected void Cerrar(ActionEvent e){
+		Platform.exit();
+	}
 	public void sumaPuntos(){
 		grid.setRowIndex(meCasiaron, (int) (Math.random()*5));
 		grid.setColumnIndex(meCasiaron, (int) (Math.random()*5));
@@ -65,15 +76,4 @@ public class SampleController {
 		puntos++;
 		points.setText(Integer.toString(puntos));
 	}
-/*	private void compare(){
-		final int x = grid.getColumnIndex(boton);
-		final int y = grid.getRowIndex(boton);
-		final int xx = grid.getColumnIndex(meCasiaron);
-		final int yy = grid.getRowIndex(meCasiaron);
-		if(x==xx && y==yy){
-			sumaPuntos();
-			grid.setRowIndex(meCasiaron, (int) (Math.random()*5));
-			grid.setColumnIndex(meCasiaron, (int) (Math.random()*5));
-		}
-	}*/
 }
