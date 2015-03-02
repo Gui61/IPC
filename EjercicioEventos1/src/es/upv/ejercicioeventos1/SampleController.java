@@ -20,6 +20,7 @@ public class SampleController {
 	@FXML
 	private Text points;
 	
+	@SuppressWarnings({ "static-access", "incomplete-switch" })
 	@FXML
 	protected void botonMove(KeyEvent key) {
 		final int x = grid.getColumnIndex(boton);
@@ -70,10 +71,20 @@ public class SampleController {
 		Platform.exit();
 	}
 	public void sumaPuntos(){
-		grid.setRowIndex(meCasiaron, (int) (Math.random()*5));
-		grid.setColumnIndex(meCasiaron, (int) (Math.random()*5));
+		mover();
 		int puntos = Integer.parseInt(points.getText());
 		puntos++;
 		points.setText(Integer.toString(puntos));
+	}
+	@SuppressWarnings({ "static-access"})
+	private void mover(){
+		int x = (int)(Math.random()*5);
+		int y = (int)(Math.random()*5);
+		if(x==grid.getColumnIndex(boton) && y==grid.getRowIndex(boton))
+			mover();
+		else{
+			grid.setColumnIndex(meCasiaron, x);
+			grid.setRowIndex(meCasiaron, y);
+		}
 	}
 }
