@@ -19,7 +19,6 @@ public class Main extends Application {
 			primaryStage.setTitle("Cuadrados locos");
 			primaryStage.setScene(scene);
 			primaryStage.initStyle(StageStyle.TRANSPARENT);
-			
 			scene.setOnMousePressed((e)->{
 				x= primaryStage.getX() - e.getScreenX();
 				y= primaryStage.getY() - e.getScreenY();
@@ -29,7 +28,6 @@ public class Main extends Application {
 				primaryStage.setX(e.getScreenX() + x);
 				primaryStage.setY(e.getScreenY() + y);
 			});
-			
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
