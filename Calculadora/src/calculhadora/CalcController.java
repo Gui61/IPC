@@ -28,28 +28,34 @@ public class CalcController {
 			valor = "";
 			res.setText("");
 			stackValor ="0";
+			break;
 		case "+":
 			stackValor = res.getText();
 			res.setText("");
 			valor = "";
 			op = "+";
+			break;
 		case "-":
 			stackValor = res.getText();
 			res.setText("");
 			valor = "";
 			op = "-";
+			break;
 		case "X":
 			stackValor = res.getText();
 			res.setText("");
 			valor = "";
 			op = "X";
+			break;
 		case "/":
 			stackValor = res.getText();
 			res.setText("");
 			valor = "";
 			op = "/";
+			break;
 		case ".":
-			valor += "+";
+			valor += ".";
+			break;
 		case "=":
 			double x = Double.parseDouble(stackValor);
 			double y = Double.parseDouble(valor);
@@ -63,6 +69,8 @@ public class CalcController {
 			case "/":
 				res.setText(String.valueOf(x/y));
 			}
+			valor = "";
+			break;
 		}
 	}
 
