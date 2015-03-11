@@ -31,24 +31,28 @@ public class CalcController {
 			op="";
 			break;
 		case "+":
+			if(stackValor!="0") igual();
 			stackValor = res.getText();
 			res.setText("");
 			valor = "";
 			op = "+";
 			break;
 		case "-":
+			if(stackValor!="0") igual();
 			stackValor = res.getText();
 			res.setText("");
 			valor = "";
 			op = "-";
 			break;
 		case "X":
+			if(stackValor!="0") igual();
 			stackValor = res.getText();
 			res.setText("");
 			valor = "";
 			op = "X";
 			break;
 		case "/":
+			if(stackValor!="0") igual();
 			stackValor = res.getText();
 			res.setText("");
 			valor = "";
@@ -58,23 +62,25 @@ public class CalcController {
 			valor += ".";
 			break;
 		case "=":
-			double x = Double.parseDouble(stackValor);
-			double y = Double.parseDouble(valor);
-			switch(op){
-			case "+":
-				res.setText(Double.toString(x+y));
-				break;
-			case "-":
-				res.setText(Double.toString(x-y));
-				break;
-			case "X":
-				res.setText(Double.toString(x*y));
-				break;
-			case "/":
-				res.setText(Double.toString(x/y));
-				break;
-			}
-			valor = "";
+			igual();
+			break;
+		}
+	}
+	private void igual(){
+		double x = Double.parseDouble(stackValor);
+		double y = Double.parseDouble(valor);
+		switch(op){
+		case "+":
+			res.setText(Double.toString(x+y));
+			break;
+		case "-":
+			res.setText(Double.toString(x-y));
+			break;
+		case "X":
+			res.setText(Double.toString(x*y));
+			break;
+		case "/":
+			res.setText(Double.toString(x/y));
 			break;
 		}
 	}
