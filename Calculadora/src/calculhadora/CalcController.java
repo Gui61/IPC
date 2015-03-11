@@ -28,6 +28,7 @@ public class CalcController {
 			valor = "";
 			res.setText("");
 			stackValor ="0";
+			op="";
 			break;
 		case "+":
 			stackValor = res.getText();
@@ -61,13 +62,17 @@ public class CalcController {
 			double y = Double.parseDouble(valor);
 			switch(op){
 			case "+":
-				res.setText(String.valueOf(x+y));
+				res.setText(Double.toString(x+y));
+				break;
 			case "-":
-				res.setText(String.valueOf(x-y));
+				res.setText(Double.toString(x-y));
+				break;
 			case "X":
-				res.setText(String.valueOf(x*y));
+				res.setText(Double.toString(x*y));
+				break;
 			case "/":
-				res.setText(String.valueOf(x/y));
+				res.setText(Double.toString(x/y));
+				break;
 			}
 			valor = "";
 			break;
